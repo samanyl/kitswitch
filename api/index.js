@@ -11,7 +11,7 @@ let DATABASE_NAME = "cs193x_project";
 // input your own username and password
 let USER = process.env.USER;
 const MONGODB_URL = process.env.MONGODB_URL || "mongodb://localhost";
-let PASS = = process.env.PASS;
+let PASS = process.env.PASS;
 
 let api = express.Router();
 let conn;
