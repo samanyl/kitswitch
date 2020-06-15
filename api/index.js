@@ -12,6 +12,7 @@ let DATABASE_NAME = "kitswitch";
 let USER = process.env.USER || "";
 const MONGODB_URL = process.env.MONGODB_URL || "mongodb://localhost";
 let PASS = process.env.PASS || "";
+let SENDER = process.env.SENDER || "";
 
 let api = express.Router();
 let conn;
@@ -72,7 +73,7 @@ api.post("/orders", async (req, res) => {
 
   let mailOptions1 = {
     from: req.body.email,
-    to: 'samantha.liu@stanford.edu',
+    to: SENDER,
     subject: `KIT SWITCH ORDER #${order._id}`,
     html: `<p>You have a new order request from ${req.body.company}!</p>\n<p>"${req.body.message}"</p>`,
     attachments: [{
@@ -82,7 +83,7 @@ api.post("/orders", async (req, res) => {
   }
 
   let mailOptions2 = {
-    from: 'kitswitch@gmail.com',
+    from: 'kitswitch.inquiries@gmail.com',
     to: req.body.email,
     subject: `KIT SWITCH ORDER CONFIRMATION`,
     html: `<p>Dear ${req.body.name},</p>\n<p>Thank you for your order request with Kit Switch, please keep this email for your records.</p>\n<p>Your order number is: #${order._id}</p>`
