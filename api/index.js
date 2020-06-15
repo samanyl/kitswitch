@@ -13,7 +13,6 @@ let USER = process.env.USER || "";
 const MONGODB_URL = process.env.MONGODB_URL || "mongodb://localhost";
 let PASS = process.env.PASS || "";
 let SENDER = process.env.SENDER || "";
-let FROM = process.env.FROM || "";
 
 let api = express.Router();
 let conn;
