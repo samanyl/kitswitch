@@ -84,7 +84,7 @@ api.post("/orders", async (req, res) => {
   let mailOptions2 = {
     to: req.body.email,
     subject: `KIT SWITCH ORDER CONFIRMATION`,
-    html: `<p>Dear ${req.body.name},</p>\n<p>Thank you for your order request with Kit Switch, please keep this email for your records.</p>\n<p>Your order number is: #${order._id}</p>`
+    html: `<p>Dear ${req.body.name},</p>\n<p>Thank you for your order request with Kit Switch, please keep this email for your records.</p>\n<p>Your order number is: #${order._id}</p><p>Do not reply to this email, it is an automated message.</p>`
   }
 
   try {
