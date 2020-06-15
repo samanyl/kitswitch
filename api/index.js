@@ -6,7 +6,7 @@ const express = require("express");
 const { MongoClient } = require("mongodb");
 const nodemailer = require('nodemailer');
 
-let DATABASE_NAME = "cs193x_project";
+let DATABASE_NAME = "kitswitch";
 
 // input your own username and password
 let USER = process.env.USER || "";
