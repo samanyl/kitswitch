@@ -72,7 +72,7 @@ api.post("/orders", async (req, res) => {
 
   let mailOptions1 = {
     from: req.body.email,
-    to: 'kitswitch@gmail.com',
+    to: 'liu.samantha.y@gmail.com',
     subject: `KIT SWITCH ORDER #${order._id}`,
     html: `<p>You have a new order request from ${req.body.company}!</p>\n<p>"${req.body.message}"</p>`,
     attachments: [{
