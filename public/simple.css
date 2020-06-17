@@ -990,6 +990,12 @@ div.placeholder svg circle.small {
   flex-direction: column;}
 
 @media (max-width: 767px) {
+  .mbr-col-sm-6 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 50%;
+    padding-right: 1rem;
+    padding-left: 1rem; }}
   .mbr-col-sm-12 {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
